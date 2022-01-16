@@ -1,0 +1,16 @@
+.quicklink {
+    > .item > .link {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    @media only screen and (min-width: 768px) {
+        > .item > .link {
+            text-align: left;
+        }
+    }
+}

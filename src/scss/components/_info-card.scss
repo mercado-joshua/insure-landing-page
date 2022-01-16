@@ -1,0 +1,15 @@
+.info-card {
+    > .title {
+        margin: 1em 0;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: .7;
+    }
+
+    @media only screen and (min-width: 768px) {
+        > .title {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    }
+}

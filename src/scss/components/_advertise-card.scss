@@ -1,0 +1,30 @@
+.advertise-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    > .contentbox {
+        > .title,
+        > .description {
+            text-align: center;
+        }
+
+        > .title {
+            margin-bottom: 1em;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        > .contentbox {
+            > .title,
+            > .description {
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.advertise-section {
+    padding: 4em 1.5em;
+
+    > .title {
+        position: relative;
+        padding-top: 1em;
+        margin-bottom: 2em;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: .01em;
+            width: 50%;
+            background-color: hsl(256, 26%, 20%);
+        }
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        padding: 6.5em 2em;
+    }
+
+    @media only screen and (min-width: 768px) {
+        padding: 12em 6em 5em 6em;
+
+        > .title {
+            text-align: left;
+
+            &::before {
+                left: 0;
+                transform: translateX(0);
+                width: 3em;
+            }
+        }
+
+        > .advertise-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5em;
+            align-items: flex-start;
+        }
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        padding-left: 9em;
+        padding-right: 9em;
+    } 
+}
+
+.advertise-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}

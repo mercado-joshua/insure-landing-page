@@ -1,0 +1,85 @@
+.nav-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(256, 26%, 20%);
+    color: #fff;
+
+    > .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        background-color: #fff;
+    }
+
+    > .primary-menu {
+        margin: 0 1.5em;
+        margin-top: 2em;
+
+        > .item + .item {
+            margin-top: 2em;
+        }
+
+        > .item:last-child > .link {
+            border: .1em solid #fff;
+            padding: .5em 1.5em;
+        }
+
+        @media only screen and (min-width: 768px) {
+            margin: 0;
+
+            > .item + .item {
+                margin-top: 0;
+            }
+
+            > .item:last-child > .link {
+                border: .1em solid #000;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 8em;
+        width: 100%;
+        background: url("../../images/bg-pattern-mobile-nav.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.-active {
+        display: block;
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        > .header-section {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+        background-color: transparent;
+        position: static;
+        width: auto;
+        min-height: auto;
+
+        > .header-section {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}
